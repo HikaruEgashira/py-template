@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,
-      "version": "3.10.12"
+      "version": "3.12"
     },
     "ghcr.io/devcontainers-contrib/features/poetry:2": {
       "version": "1.5.1"
