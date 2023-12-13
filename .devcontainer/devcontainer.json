@@ -10,7 +10,6 @@
       "version": "1.5.1"
     }
   },
-  "initializeCommand": "poetry install --no-ansi --no-root",
   "containerEnv": {
     "TZ": "Asia/Tokyo"
   },
