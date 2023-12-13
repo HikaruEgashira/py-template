@@ -1,42 +1,26 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-  "name": "devcontainer-ubuntu",
-  // "image": "mcr.microsoft.com/devcontainers/base:jammy",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "dockerFile": "Dockerfile",
-  "postAttachCommand": "rye sync",
+  "name": "Poetry",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "version": "3.10.12"
+    },
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {
+      "version": "1.5.1"
+    }
+  },
+  "initializeCommand": "poetry install --no-ansi --no-root",
   "containerEnv": {
     "TZ": "Asia/Tokyo"
   },
-
-  "runArgs": ["--init"],
-  // "runArgs": ["--init", "--gpus", "all"]
-
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Configure tool-specific properties.
-  // "customizations": {},
-
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-python.black-formatter",
-        "charliermarsh.ruff",
-        "njpwerner.autodocstring",
-        "ms-toolsai.jupyter",
-        "oderwat.indent-rainbow",
-        "IBM.output-colorizer",
-        "christian-kohler.path-intellisense"
+        "charliermarsh.ruff"
       ]
     }
-  },
-  "remoteUser": "vscode",
-  "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh"
+  }
 }
