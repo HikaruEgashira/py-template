@@ -1,14 +1,9 @@
 {
   "name": "Poetry",
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "installTools": true,
-      "version": "3.12"
-    },
-    "ghcr.io/devcontainers-contrib/features/poetry:2": {
-      "version": "1.5.1"
-    }
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {}
   },
   "containerEnv": {
     "TZ": "Asia/Tokyo"
