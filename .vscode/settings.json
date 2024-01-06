@@ -10,5 +10,6 @@
   "python.testing.pytestEnabled": true,
   "ruff.lint.args": [
     "--config=./pyproject.toml"
-  ]
+  ],
+  "python.defaultInterpreterPath": "./.venv/bin/python",
 }

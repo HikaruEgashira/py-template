@@ -2,7 +2,6 @@
   "name": "Poetry",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/devcontainers-contrib/features/poetry:2": {}
   },
   "containerEnv": {
@@ -13,8 +12,10 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "GitHub.copilot"
       ]
     }
-  }
+  },
+  "onCreateCommand": "poetry install --no-root"
 }
